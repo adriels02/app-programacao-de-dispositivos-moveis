@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+  <meta name="description" content="Cadastro de evento para a Agenda Colaborativa.">
+  <title>Cadastrar Evento - Agenda Colaborativa</title>
+  <link rel="stylesheet" href="./css/main-bar.css">
+  <link rel="stylesheet" href="./css/eventos-cadastro.css">
+</head>
+<body>
+  <div class="eventos-container">
+    <img src="img/tela_eventos_circulo_coracao_verde.svg" alt="Imagem" class="eventos-image">
+    <div class="eventos-text">
+      <h1 class="eventos-title">Cadastrar Evento</h1>
+    </div>
+  </div>
+
+  <form id="event-form" method="POST" enctype="multipart/form-data">
+    <div class="form-container">
+      <div class="campo">
+        <label for="titulo">Título:</label>
+        <input type="text" name="titulo" required>
+      </div>
+  
+      <div class="campo">
+        <label for="descricao">Descrição:</label>
+        <textarea name="descricao" required></textarea>
+      </div>
+
+      <div class="campo">
+        <label for="promotor">Quem promove:</label>
+        <input type="text" name="promotor" required>
+      </div>
+  
+      <div class="campo">
+        <label for="local">Local:</label>
+        <input type="text" name="local" required>
+      </div>
+
+      <div class="campo-horizontal">
+        <div class="campo">
+          <label for="estado">Estado:</label>
+          <select name="estado" required>
+<option value="">Selecione</option>
+<option value="AC">Acre</option>
+<option value="AL">Alagoas</option>
+<option value="AP">Amapá</option>
+<option value="AM">Amazonas</option>
+<option value="BA">Bahia</option>
+<option value="CE">Ceará</option>
+<option value="DF">Distrito Federal</option>
+<option value="ES">Espírito Santo</option>
+<option value="GO">Goiás</option>
+<option value="MA">Maranhão</option>
+<option value="MT">Mato Grosso</option>
+<option value="MS">Mato Grosso do Sul</option>
+<option value="MG">Minas Gerais</option>
+<option value="PA">Pará</option>
+<option value="PB">Paraíba</option>
+<option value="PR">Paraná</option>
+<option value="PE">Pernambuco</option>
+<option value="PI">Piauí</option>
+<option value="RJ">Rio de Janeiro</option>
+<option value="RN">Rio Grande do Norte</option>
+<option value="RS">Rio Grande do Sul</option>
+<option value="RO">Rondônia</option>
+<option value="RR">Roraima</option>
+<option value="SC">Santa Catarina</option>
+<option value="SP">São Paulo</option>
+<option value="SE">Sergipe</option>
+<option value="TO">Tocantins</option>
+          </select>
+        </div>
+  
+        <div class="campo">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" name="telefone" placeholder="(XX) XXXX-XXXX">
+        </div>
+
+      </div>
+  
+      <div class="campo-horizontal">
+        <div class="campo">
+          <label for="data-inicio">Data (início):</label>
+          <input type="date" name="data-inicio" required>
+        </div>
+        <div class="campo">
+          <label for="horario-inicio">Hora (início):</label>
+          <input type="time" name="horario-inicio" required>
+        </div>
+      </div>
+      
+      <div class="campo-horizontal">
+        <div class="campo">
+          <label for="data-fim">Data (fim):</label>
+          <input type="date" name="data-fim" required>
+        </div>
+        <div class="campo">
+          <label for="horario-fim">Hora (fim):</label>
+          <input type="time" name="horario-fim" required>
+        </div>
+      </div>
+      
+   
+      <div class="campo">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email">
+      </div>
+      
+      <div class="campo">
+        <label for="link">Link do Evento:</label>
+        <input type="url" name="link" placeholder="https://exemplo.com">
+      </div>
+       
+      <div class="campo-imagem">
+      <label id="labelImagem" for="imagem">Imagem do Evento (opcional):</label>
+      <button type="button" id="selecionarImagem">Selecionar Imagem</button>
+     <img id="preview" style="max-width: 100%; height: auto; display: block; margin-top: 10px;">
+    </div>
+
+      <button type="submit">Inserir Evento</button>
+    </div>
+  </form>
+  <script src="cordova.js"></script>
+  <script src="./js/eventos-cadastro.js"></script>
+  <script src="./js/main-bar.js"></script>
+  <script>
+  document.addEventListener('deviceready', function () {
+
+    const botao = document.getElementById('selecionarImagem');
+    const preview = document.getElementById('preview');
+
+    botao.addEventListener('click', function () {
+      
+      if (!navigator.camera) {
+        alert('❌ Plugin da câmera não está disponível!');
+        return;
+      }
+
+      navigator.camera.getPicture(
+function onSuccess(imageData) {
+
+  const prefix = "data:image/jpeg;base64,";
+  const base64Image = imageData.startsWith(prefix) ? imageData : prefix + imageData;
+
+  const preview = document.getElementById("preview");
+  preview.src = base64Image;
+},
+        function onFail(message) {
+          alert('Erro: ' + message);
+        },
+        {
+          quality: 60,
+          destinationType: Camera.DestinationType.DATA_URL,
+          sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+          encodingType: Camera.EncodingType.JPEG,
+          mediaType: Camera.MediaType.PICTURE
+        }
+      );
+    });
+  }, false);
+</script>
+</body>
+</html>

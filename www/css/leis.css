@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --branco: #ffff;
+    --bege: #F9F5E9;
+    --marrom: #4D352D;
+    --rosa: #E291A3;
+    --laranja: #FAB958;
+    --azul: #65B6DB;
+    --verde: #78C19E;
+    --font-size-base: 1rem;
+   
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bege);
+    color: var(--marrom);
+    font-size: var(--font-size-base);
+    font-family: Arial, sans-serif;
+    /* overflow-x: hidden;  */
+    overflow-y: auto;  /* Permite rolagem vertical */
+    touch-action: manipulation !important;
+ 
+}
+
+/* Filtro de Leis */
+.filtro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.filtro-select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: var(--branco);
+    background-color: var(--marrom);
+    border: none;
+    border-radius: 8px;
+    width: 18rem; /* Ajuste na largura */
+    cursor: pointer;
+}
+
+/* Contêiner principal que envolve todo o conteúdo */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Garante que o conteúdo preencha o espaço restante */
+    padding-bottom: 4rem; /* Reservar espaço para o menu fixo */
+}
+
+.leis-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 1rem; 
+    text-align: left;
+    padding: 20px;
+}
+
+.leis-image {
+    width: 5rem; 
+    height: auto;
+}
+
+.leis-title {
+    font-size: 35px; 
+    font-weight: bold;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.leis-text {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    
+}
+
+.leis-subtitle {
+    font-size: 1rem;
+    margin-top: 0rem; 
+    color: var(--marrom);
+    font-weight: normal;
+    margin-left: 0.1cm;
+    margin-bottom: 1rem;
+}
+
+.search-button:hover {
+    background-color: var(--rosa);
+}
+
+/* Estilo para a lista de leis */
+.laws-container {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--branco);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+.law-item {
+    padding: 10px;
+    border-bottom: 1px solid var(--bege);
+}
+
+.law-item h2 {
+    font-size: 1.2rem;
+    color: var(--marrom);
+    margin: 0;
+}
+
+.law-item a {
+    color: var(--azul);
+    text-decoration: none;
+}
+
+.law-item a:hover {
+    text-decoration: underline;
+}
+
+.leis-dinamicas {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 2rem;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    
+}
+
+/* Ajuste no card para centralizar o conteúdo dentro dele */
+.law-card {
+    background-color: var(--branco);
+    margin-bottom: 1rem; 
+    border: 2px solid var(--laranja);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-top: 0.5rem;  
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    width: 17rem;
+}
+
+/* Define o comportamento do cartão ao passar o mouse */
+.law-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.law-title {
+    font-size: 1.5rem;
+    color: var(--marrom);
+    margin-bottom: 0.5rem;
+}
+
+
+.law-description {
+    font-size: 1rem;
+    color: var(--marrom);
+    margin-bottom: 1rem;
+}
+
+
+.law-link {
+    font-size: 1rem;
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: none;
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+.law-link:hover {
+    color: var(--verde);
+    border-bottom: 1px solid var(--verde);
+}
+
+/* Aplicar justificação ao texto dentro dos cards */
+.law-card p {
+    text-align: left;
+    margin: 9px 0; 
+  }
+
+
+

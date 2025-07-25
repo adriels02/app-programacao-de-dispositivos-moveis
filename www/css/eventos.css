@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --branco: #ffff;
+    --bege: #F9F5E9;
+    --marrom: #4D352D;
+    --rosa: #E291A3;
+    --laranja: #FAB958;
+    --azul: #65B6DB;
+    --verde: #78C19E;
+    --font-size-base: 1rem;
+}
+
+/* Garante que a página ocupe toda a viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bege);
+    color: var(--marrom);
+    font-size: var(--font-size-base);
+    font-family: Arial, sans-serif;
+    overflow-y: auto; 
+    padding-bottom: 2rem;
+    touch-action: manipulation !important;
+}
+
+.eventos-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 1rem; 
+    text-align: left;
+    padding: 20px;
+}
+
+.eventos-image {
+    width: 5rem; 
+    height: auto;
+    /* margin-left: 0cm; */
+}
+
+.eventos-title {
+    font-size: 35px; 
+    font-weight: bold;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.eventos-text {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    
+}
+
+.eventos-subtitle {
+    font-size: 1rem;
+    margin-top: 0rem; 
+    color: var(--marrom);
+    font-weight: normal;
+    margin-left: 0.1cm;
+    margin-bottom: 1rem;
+}
+
+/* Botão de Cadastrar Evento */
+.cadastro-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.cadastro-btn {
+    background-color: var(--verde);
+    color: var(--branco);
+    font-size: 1.2rem;
+    font-weight: bold; /* Fonte em negrito */
+    padding: 1rem 2rem;
+    border: 1px solid var(--branco); /* Contorno fino branco */
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 15rem; 
+    
+}
+
+.cadastro-btn:hover {
+    background-color: var(--rosa);
+}
+
+/* Filtro de Estado */
+.filtro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.filtro-select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: var(--branco);
+    background-color: var(--marrom);
+    border: none;
+    border-radius: 8px;
+    width: 18rem; 
+    cursor: pointer;
+}
+
+/* Estilos para os cards de eventos */
+.evento {
+    background-color: var(--branco);
+    border: 2px solid var(--verde); /* Bordas verdes */
+    border-radius: 8px; /* Arredonda as bordas */
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 1rem; 
+    width: 18rem; /* Largura fixa do card */
+    transition: all 0.3s ease;
+}
+
+/* Ajustes nos elementos internos do .evento */
+.evento h1,
+.evento h2,
+.evento p {
+    margin: 0.5rem 0; /* Diminui o espaçamento vertical */
+}
+
+.evento img {
+    margin-bottom: 0rem; /* Reduz espaço abaixo da imagem */
+    width: 100%; /* Garante que a imagem não ultrapasse a largura do card */
+    height: auto; /* Mantém a proporção */
+}
+
+#imgEvento {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do card */
+    height: 5rem; /* Altura fixa */
+    object-fit: cover; /* Corta a imagem para ajustar à altura e largura sem distorcer */
+    border-radius: 8px 8px 0 0; /* Mantém os cantos arredondados na parte superior */
+}
+/* Exibição dos eventos */
+#eventosList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 2rem; /* Espaço extra na parte inferior para garantir que o último card não fique colado */
+       
+}
+
+#nenhumEvento {
+    display: flex;
+    justify-content: center; 
+    height: 60vh; 
+    padding: 0 2rem; 
+    font-size: 1rem; 
+    font-weight: bold;
+    color: var(--marrom);
+    text-align: center; 
+    background-color: var(--bege); 
+    border-radius: 8px;
+}
+
+a {
+    text-decoration: none; 
+    color: var(--marrom);
+    cursor: pointer;       
+}

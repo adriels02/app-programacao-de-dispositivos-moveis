@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+  <meta name="description" content="Exibição de eventos filtrados por estado na Agenda Colaborativa.">
+  <title>Exibir Eventos - Agenda Colaborativa</title>
+  <link rel="stylesheet" href="./css/main-bar.css">
+  <link rel="stylesheet" href="./css/eventos.css">
+</head>
+<body>
+  <div class="eventos-container">
+    <img src="img/tela_eventos_circulo_coracao_verde.svg" alt="Imagem" class="eventos-image">
+    <div class="eventos-text">
+      <h1 class="eventos-title">Agenda Colaborativa</h1>
+    </div>
+  </div>
+
+  <!-- Botão para ir à tela de cadastro de evento -->
+  <div class="cadastro-container">
+    <button class="cadastro-btn" onclick="window.location.href='eventos-cadastro.html'">Cadastrar Evento</button>
+  </div>
+
+  <!-- Filtro de Eventos -->
+  <div class="filtro-container">
+    <select id="filtroEstado" class="filtro-select">
+<option value="">Selecione</option>
+<option value="AC">Acre</option>
+<option value="AL">Alagoas</option>
+<option value="AP">Amapá</option>
+<option value="AM">Amazonas</option>
+<option value="BA">Bahia</option>
+<option value="CE">Ceará</option>
+<option value="DF">Distrito Federal</option>
+<option value="ES">Espírito Santo</option>
+<option value="GO">Goiás</option>
+<option value="MA">Maranhão</option>
+<option value="MT">Mato Grosso</option>
+<option value="MS">Mato Grosso do Sul</option>
+<option value="MG">Minas Gerais</option>
+<option value="PA">Pará</option>
+<option value="PB">Paraíba</option>
+<option value="PR">Paraná</option>
+<option value="PE">Pernambuco</option>
+<option value="PI">Piauí</option>
+<option value="RJ">Rio de Janeiro</option>
+<option value="RN">Rio Grande do Norte</option>
+<option value="RS">Rio Grande do Sul</option>
+<option value="RO">Rondônia</option>
+<option value="RR">Roraima</option>
+<option value="SC">Santa Catarina</option>
+<option value="SP">São Paulo</option>
+<option value="SE">Sergipe</option>
+<option value="TO">Tocantins</option>
+    </select>
+    <!-- <button class="filtro-btn" onclick="filtrarEventos()">Filtrar</button> -->
+  </div>
+
+  <div id="eventosList"></div>
+
+  <script src="./js/eventos.js"></script>
+
+  <script src="./js/main-bar.js"></script>
+</body>
+</html>

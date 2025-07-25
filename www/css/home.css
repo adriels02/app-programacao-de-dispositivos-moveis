@@ -1,0 +1,121 @@
+:root {
+    --branco: #ffff;
+    --bege: #F9F5E9;
+    --marrom: #4D352D;
+    --rosa: #E291A3;
+    --laranja: #FAB958;
+    --azul: #65B6DB;
+    --verde: #78C19E;
+    --font-size-base: 1rem; /* Tamanho base da fonte */
+}
+
+/* Garante que a página ocupe toda a viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bege);
+    color: var(--marrom); 
+    font-size: var(--font-size-base); 
+    font-family: Arial, sans-serif;
+    touch-action: manipulation !important;
+}
+
+/* Container centralizando todo o conteúdo */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Imagem da logomarca do projeto */
+.logo {
+    width: 16rem; /* Usando rem para largura proporcional */
+    height: auto;
+}
+
+/* Título principal */
+.main-title {
+    font-size: 2rem;
+    font-weight: bold;
+    
+}
+
+/* Frase ou subtítulo */
+.subtitle {
+    font-size: 1rem;
+    color: var(--marrom);
+    margin-bottom: 1.5rem;
+    font-family: Arial, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--azul);
+    cursor: pointer;
+}
+a:hover {
+    color: var(--marrom); 
+}
+
+.subtitle-suporte {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* Botões de navegação */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espaço entre os botões */
+}
+
+.button {
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: #E291A3;
+}
+
+
+/* Imagem de apoio (baixo) */
+.support-image {
+    width: 5rem; /* estava 10rem. Usando rem para largura proporcional */
+    height: auto;
+    margin-top: 2rem;
+}
+
+
+.support-image {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}

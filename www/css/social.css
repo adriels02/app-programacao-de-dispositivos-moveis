@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --branco: #ffff;
+    --bege: #F9F5E9;
+    --marrom: #4D352D;
+    --rosa: #E291A3;
+    --laranja: #FAB958;
+    --azul: #65B6DB;
+    --verde: #78C19E;
+    --font-size-base: 1rem;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--bege);
+    color: var(--marrom);
+    font-size: var(--font-size-base);
+    font-family: Arial, sans-serif;
+    overflow-y: auto; 
+    padding-bottom: 60px;
+    touch-action: manipulation !important;
+}
+
+.social-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 1rem; 
+    text-align: left;
+    padding: 20px;
+}
+
+.social-image {
+    width: 5rem; 
+    height: auto;
+    /* margin-left: 0cm; */
+}
+
+.social-title {
+    font-size: 35px; 
+    font-weight: bold;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.social-text {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    
+}
+
+.social-subtitle {
+    font-size: 1rem;
+    margin-top: 0rem; 
+    color: var(--marrom);
+    font-weight: normal;
+    margin-left: 0.1cm;
+    margin-bottom: -3rem;
+}
+
+.cards-container {
+    padding: 20px;
+    
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    background-color: var(--branco);
+    margin-bottom: 1rem; 
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    border: 2px solid var(--azul);
+}
+
+.card:hover {
+    background-color: var(--azul);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    display: block; 
+    margin-right: 15px; 
+}
+
+
+.card-content {
+    text-align: left;
+    
+}
+
+.card-title {
+    font-size: 25px;
+    color: var(--marrom);
+    margin: 1px;
+    padding-bottom: 0cm;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: var(--marrom);
+    padding-top: 0px;
+}
+
