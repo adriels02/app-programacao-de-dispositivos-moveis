@@ -23,14 +23,14 @@ Usuários podem visualizar eventos, oficinas, palestras e campanhas educativas p
 O cadastro dos eventos é feito exclusivamente por instituições registradas, garantindo segurança e confiabilidade.
 
 ### 🤖 Chatbot
-Permite que adolescentes tirem dúvidas, entendam seus direitos e recebam orientações claras sobre como agir em situações de risco.  
+Permite que crianças e adolescentes tirem dúvidas, entendam seus direitos e recebam orientações claras sobre como agir em situações de risco.  
 Está em constante evolução e futuramente incluirá recursos de monitoramento de vulnerabilidade.
 
 ### 👥 Tela Comunidade
 Lista ONGs e instituições que atuam na proteção infantojuvenil, com descrições e links oficiais, conectando o usuário a redes de apoio.
 
 ### 📞 Tela Denuncie
-Acesso direto a canais de denúncia com discagem rápida, explicações sobre cada órgão e links úteis para denúncias online, WhatsApp, Telegram e Libras.
+Acesso direto a canais de denúncia com discagem rápida, explicações sobre cada órgão e links úteis para denúncias online, WhatsApp e Telegram.
 
 ### ⚖️ Tela Leis Brasileiras
 Apresenta de forma simplificada as principais leis brasileiras de proteção à criança e ao adolescente, com acesso aos textos oficiais.
@@ -70,7 +70,6 @@ Apresenta de forma simplificada as principais leis brasileiras de proteção à 
 - Sistema funcional integrado ao back-end  
 - Responde dúvidas e orientações automatizadas
 
-
 ### 🔗 APIs Utilizadas no Projeto VALENTE
 
 #### 🌐 API de Conectividade com a Internet
@@ -78,7 +77,7 @@ Apresenta de forma simplificada as principais leis brasileiras de proteção à 
 - Garante acesso em tempo real ao login, cadastro de eventos, listagem e uso do chatbot
 
 #### 🖼️ API da Galeria
-- Permite que o usuário acesse imagens do dispositivo, como em cadastros ou envios de imagem
+- Permite que o usuário acesse imagens do dispositivo, como no envio de imagem para cadastro de evento
 
 #### 🎙️ API do Microfone
 - Entrada de áudio para converter voz em texto no chatbot 
